@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_solidart_testapp/counter/counter.dart';
+import 'package:flutter_solidart_testapp/githubserch/ui/search_page.dart';
 import 'package:flutter_solidart_testapp/todo/todos_page.dart';
 import 'package:flutter_solidart_testapp/toggle_thme/toggle_theme.dart';
 
@@ -40,6 +41,14 @@ class HomePageScreen extends StatelessWidget {
                     MaterialPageRoute(builder: (ctx) => const MyToggleApp()));
               },
               child: const Text('Toggle theme'),
+            ),
+            const SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (ctx) => const SearchPage()));
+              },
+              child: const Text('Github Search'),
             ),
           ],
         ),
