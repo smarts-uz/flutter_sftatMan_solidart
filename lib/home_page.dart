@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_solidart_testapp/counter.dart';
+import 'package:flutter_solidart_testapp/counter/counter.dart';
+import 'package:flutter_solidart_testapp/todo/todos_page.dart';
 
 class HomePageScreen extends StatelessWidget {
   const HomePageScreen({super.key});
@@ -22,6 +23,14 @@ class HomePageScreen extends StatelessWidget {
                     MaterialPageRoute(builder: (ctx) => const CounterPage()));
               },
               child: const Text('Counter'),
+            ),
+            const SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (ctx) => const TodosPage()));
+              },
+              child: const Text('Todos'),
             ),
           ],
         ),
