@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_solidart_testapp/counter/counter.dart';
 import 'package:flutter_solidart_testapp/todo/todos_page.dart';
+import 'package:flutter_solidart_testapp/toggle_thme/toggle_theme.dart';
 
 class HomePageScreen extends StatelessWidget {
   const HomePageScreen({super.key});
@@ -31,6 +32,14 @@ class HomePageScreen extends StatelessWidget {
                     MaterialPageRoute(builder: (ctx) => const TodosPage()));
               },
               child: const Text('Todos'),
+            ),
+            const SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (ctx) => const MyToggleApp()));
+              },
+              child: const Text('Toggle theme'),
             ),
           ],
         ),
